@@ -1,0 +1,440 @@
+body {
+    font-family: 'GepesteV', NOMA , sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+.left-sidebar {
+  width: 70px;
+  overflow-x: hidden;
+  background-color: #2a2a2a;
+    padding: 20px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.right-sidebar {
+  width: 350px;
+  overflow-x: hidden;
+  background-color: #2a2a2a;
+    padding: 20px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    height: 70vh;
+    overflow-y: hidden;
+    border-radius: 0 0 0 8px;
+}
+
+  .logo {
+    display: block;
+    width: 100px; /* Adjust logo width */
+    margin-bottom: 20px;
+  }
+
+  .searchbar-container {
+    position: relative;
+    margin-bottom: 20px;
+    color: black;
+  }
+
+  .searchbar {
+    padding: 10px 40px 10px 40px; /* Add left and right padding */
+    width: calc(100% - 10px); /* Adjust for padding and icon width */
+    box-sizing: border-box;
+  }
+
+  .searchbar-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .searchbar-icon.right {
+    left: auto;
+    right: 20px;
+  }
+
+  .sidebar-nav {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar-nav li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .sidebar-nav li img {
+    width: 24px;
+    margin-right: 10px;
+  }
+
+  .recent-articles {
+    margin-bottom: 20px;
+    font-family: 'NOMA';
+  }
+
+  .recent-articles h3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-family: 'NOMA';
+  }
+
+  .recent-articles h3 img {
+    margin-right: 10px;
+    
+  }
+
+  .article {
+    background-color: #333;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+
+  .article img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .article-text {
+    padding: 15px;
+  }
+
+  .article-text h2 {
+    margin-top: 0;
+  }
+
+  .back-to-top {
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  .back-to-top img {
+    width: 30px; /* Size of back to top arrow */
+  }
+
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .flex-container {
+      flex-direction: column;
+    }
+
+    .content {
+      width: 100%;
+      padding: 15px;
+    }
+  }
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 55%;
+    height: 520px; /* Adjust height as needed */
+    margin-bottom: 0px;
+  }
+
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .carousel-item {
+    min-width: 100%;
+    flex: 0 0 auto;
+  }
+  .carousel-item h3 {
+    font-size: 32px;
+    margin-top: -95px;
+    margin-left: 20px;
+    font-family: 'NOMA';
+
+}
+.carousel-item p {
+    font-size: 14px;
+    margin-left: 20px;
+    margin-top: -20px;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  padding: 0 20px; /* Adjust this padding to create space for the arrows */
+}
+
+.slider {
+  display: flex;
+  flex-grow: 1; /* Ensures the slider takes up the available space */
+  transition: transform 0.5s ease;
+  width: calc(100% - 60px); /* Compensates for the padding added to the container */
+  margin: 0 auto; /* Centers the slider within the container */
+}
+
+.slider-item {
+  flex: 0 0 100%; /* Ensures each item is the full width of the slider */
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+}
+
+.slider-item img {
+  max-width: 100%; /* Adjust based on your needs */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.slide-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+   color: white; /* Or a color that contrasts with your slider's background */
+  font-size: 24px; /* Adjust size as needed for visibility */
+}
+
+.prev-slide {
+  left: 0px; /* Position the left arrow closer to the edge of the slider container */
+}
+
+.next-slide {
+  right: 0px; /* Position the right arrow closer to the edge of the slider container */
+}
+
+.carousel-navigation {
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  display: flex;
+  gap: 10px;
+}
+
+.article-info {
+  position: relative;
+  bottom: 30px;
+  left: 0px;
+  color: white; /* Adjust based on your carousel item background */
+  z-index: 2; /* Ensure it's above the carousel image */
+ 
+  }
+
+.current-article-indicator {
+  position: absolute;
+  bottom: 40px;
+  right: 100px;
+  color: white; /* Adjust as needed */
+  font-size: 24px;
+}
+
+#backToTopBtn {
+  position: absolute;
+  bottom: 20px; /* Distance from the bottom of the sidebar */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjusts for the button's width to truly center it */
+  display: none; /* Initially hidden, shown via JavaScript */
+  /* Additional styling for the button */
+}
+
+.articles-section h2 {
+  /* Section title styles */
+  color: #ffffff;
+  padding-left: 20px;
+  font-size: 32px;
+  background: -webkit-linear-gradient(90deg, rgba(97,35,219,1) 0%, rgba(255,64,204,1) 100%);
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'NOMA';
+}
+
+.articles-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1500px;
+  margin: 0 auto; /* Centers the sections in the page */
+  padding: 20px; /* Adds some padding inside each section */
+}
+
+.article-card {
+  display: flex;
+  align-items: center;
+  background-color: ;
+  color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.article-image {
+  width: 600px;
+  height: 375px;
+  object-fit: cover;
+  border-radius: 8px 8px 8px 8px;
+}
+
+.article-text {
+  padding: 20px;
+  flex-grow: 1;
+  font-size: 18px;
+}
+
+.article-title {
+  margin: 0;
+  font-size: 32px;
+  font-family: 'NOMA';
+}
+
+.article-author-date {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.article-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates three columns */
+  grid-template-rows: repeat(2, auto); /* Creates two rows with height as needed */
+  gap: 20px; /* Space between grid items */
+  padding: 20px; /* Optional: Padding around the entire grid */
+}
+
+.article-grid-item {
+  background-color: ; /* Or any color you prefer */
+  color: #ffffff; /* For the text color */
+  border-radius: 8px; /* Optional: for rounded corners */
+  overflow: hidden; /* Keeps the content within the grid item boundaries */
+  
+}
+
+.grid-image {
+  width: 100%; /* Ensures the image covers the cell width */
+  height: auto; /* Adjusts height automatically */
+  object-fit: cover; /* Ensures the image covers the assigned area */
+  border-radius: 8px 8px 8px 8px; /* Rounds the top corners */
+}
+
+.grid-article-title {
+  font-size: 24px; /* Adjust as necessary */
+  margin: 10px; /* Spacing around the title */
+  font-family: 'NOMA';
+}
+
+.grid-article-author-date {
+  font-size: 14px; /* Adjust as necessary */
+  color: #ffffff; /* Slightly lighter text color for the author and date */
+  margin: 0 10px 0px; /* Spacing around the author and date */
+}
+   /* Styles for Buzz Section */
+.buzz-col:first-child .buzz-item {
+  margin-bottom: 30px; /* Increased spacing */
+
+}  
+.buzz-section {
+  max-width: 1500px;
+  padding: 20px;
+  
+}
+
+.buzz-section h2 {
+  text-align: left;
+  font-size: 32px;
+  background: -webkit-linear-gradient(90deg, rgba(97,35,219,1) 0%, rgba(255,64,204,1) 100%);
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'NOMA';
+}
+
+.buzz-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.buzz-col {
+  flex: 1;
+  
+}
+
+/* Styles for items with images and text side by side */
+.buzz-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px; /* Existing spacing between rows */
+  min-width: 880px;
+}
+
+.buzz-item img {
+  width: 476px;
+  height: 298px;
+  border-radius: 8px 8px 8px 8px;
+}
+
+/* Adjusting the second column's first item layout */
+.buzz-col:nth-child(2) .buzz-item:first-child {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.buzz-col:nth-child(2) .buzz-item:first-child img {
+  width: 600px;
+  height: 375px; 
+  overflow: hidden;
+  object-fit: cover;
+}
+
+
+.buzz-item-text-only {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 600px;
+}
+
+.buzz-item-text-only hr {
+  border-top: 1px solid #ccc;
+  width: 100%;
+ 
+}
+
+.author-date, .article-title, .description {
+  margin: 5px 0; 
+}
+.buzz-section h4 {
+  font-size: 24px;
+  font-family: 'NOMA';
+  
+}
+
+.buzz-item, .author-date {
+  font-size: 14px;
+ 
+  }
+.buzz-item, .description {
+  font-size: 18px;
+  }
