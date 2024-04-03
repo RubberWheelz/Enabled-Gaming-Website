@@ -15,7 +15,7 @@ body {
 .left-sidebar {
   width: 100px;
   overflow-x: hidden;
-  background-color: #2a2a2a;
+  background-color: #1C1C1C;
   padding: 20px;
   padding-left: 10px;
   box-sizing: border-box;
@@ -27,12 +27,13 @@ body {
 .right-sidebar {
   width: 350px;
   overflow-x: hidden;
-  background-color: #2a2a2a;
-  padding: 20px;
+  background-color: #1C1C1C;
+  padding: 10px;
+  padding-bottom: 80px;
   box-sizing: border-box;
   position: sticky;
   top: 0;
-  height: 70vh;
+  height: 85%;
   overflow-y: hidden;
   border-radius: 0 0 0 8px;
   float: right;
@@ -42,6 +43,9 @@ body {
   width: 60px;
   margin-bottom: 20px;
   margin-left: 10px;
+}
+.logo:hover {
+  opacity: 0.5;
 }
 .searchbar-container {
   position: relative;
