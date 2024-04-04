@@ -88,7 +88,7 @@ body {
   border-radius: 20px 0px 0px 20px;
   padding: 8px;
   padding-left: 11px;
-  background: -webkit-linear-gradient(90deg, rgba(97,35,219,1) 0%, rgba(255,64,204,1) 100%);
+  background: -webkit-linear-gradient(360deg, rgba(97,35,219,1) 0%, rgba(255,64,204,1) 100%);
 }
 .sidebar-nav2 {
   list-style: none;
@@ -234,7 +234,7 @@ border-radius: 8px 8px 8px 8px;
 position: absolute;
 top: 50%;
 transform: translateY(-50%);
-background: -webkit-linear-gradient(90deg, rgba(97,35,219,1) 0%, rgba(255,64,204,1) 100%);
+background: -webkit-linear-gradient(360deg, rgba(97,35,219,1) 0%, rgba(255,64,204,1) 100%);
 border: none;
 cursor: pointer;
 width: 40px;

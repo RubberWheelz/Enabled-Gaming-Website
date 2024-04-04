@@ -54,7 +54,7 @@ body {
     border-radius: 20px 0px 0px 20px;
     padding: 8px;
     padding-left: 11px;
-    background: -webkit-linear-gradient(90deg, rgba(97,35,219,1) 0%, rgba(255,64,204,1) 100%);
+    background: -webkit-linear-gradient(360deg, rgba(97,35,219,1) 0%, rgba(255,64,204,1) 100%);
   }
   .content {
     flex-grow: 1;
@@ -94,7 +94,10 @@ body {
 .page-header h1 {
     font-size: 48px; /* Adjust to match your design */
     font-family: 'NOMA';
-    color: #FF40CC;
+    background: -webkit-linear-gradient(360deg, rgba(97,35,219,1) 0%, rgba(255,64,204,1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .header-nav ul {
@@ -127,12 +130,15 @@ body {
   
   .header-nav a:hover::after,
   .header-nav a:focus::after {
-    background-color: #FF40CC; /* The hover color */
+   background: -webkit-linear-gradient(360deg, rgba(97,35,219,1) 0%, rgba(255,64,204,1) 100%);
   }
   
   .header-nav a:hover,
   .header-nav a:focus {
-    color: #FF40CC; /* Color change on hover/focus for the text */
+    background: -webkit-linear-gradient(1800deg, rgba(97,35,219,1) 0%, rgba(255,64,204,1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 /* Adding a pseudo-element for the white line */
    .page-header::after {
@@ -166,46 +172,110 @@ body {
   }
 
 /* Footer styles */
-.main-footer {
+
+.footer {
+    background-color: #131313; /* Dark background for contrast */
     color: white;
-    background-color: #131313; /* Adjust color to match your design */
-    padding: 20px;
-    text-align: center;
+    padding-top: 40px;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 180px; /* Adjust based on your footer's height */
+    height: 320px; /* Adjust based on your footer's height */
     z-index: 1; /* Ensure it's above most content but possibly below the sidebar */
-}
-
-.footer-content {
+    margin-left: 100px;
+  }
+  
+  .footer-top {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    padding-bottom: 20px;
+    margin-bottom: 20px; /* Space between top and bottom sections */
+  }
+  
+  .footer-left, .footer-right {
+    display: flex;
+    flex-direction: column;
+  }
+  .logo-text-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+  }
+  
+  .footer-logo {
+    width: 50px; /* Adjust based on actual logo size */
+    height: auto;
+    margin-right: 10px; /* Space between the logo and the text */
+  }
+  
+  .footer-left span {
+    font-weight: normal;
+    margin-left: 0px; /* Adjust based on spacing preference */
+    font-family: 'Gore';
+    font-size: 18px;
+  }
+  .footer-left p {
+    max-width: 375px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-size: 16px;
 }
-
-.footer-logo {
-    width: 100px; /* Adjust size to fit */
+  .social-media-links a {
+    display: inline-block; /* Each link on its own line */
+    margin-right: 10px;
+  }
+  .social-media-links img {
+    width: 24px; /* Adjust based on your desired icon size */
+    height: auto;
+    vertical-align: middle; /* Helps align icons with text if present */
+    margin-bottom: 30px;
 }
-
-.footer-links a {
+  
+  .social-media-links a:hover img {
+    opacity: 0.7; /* Optional: Adds a hover effect to icons */
+  }
+  
+  .footer-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 10px; /* Space between columns */
+  }
+  
+  .footer-right h4 {
+    margin-top: 0;
+    font-family: 'NOMA';
+  }
+  .footer-right ul {
+    list-style-type: none; /* Removes bullets */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+  }
+  .footer-right ul li {
+    margin-bottom: 10px; /* Adds space between list items */
+  }
+  
+  .footer-right ul li a {
+    color: inherit; /* Inherits the footer's text color, removing the default purple color */
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+    display: block; /* Makes the anchor tag fill the li for a larger clickable area */
+    padding: 5px 0; /* Adds vertical padding within each link, increasing clickable area */
+}
+  .footer-right ul li a:hover {
+    background: -webkit-linear-gradient(900deg, rgba(97,35,219,1) 0%, rgba(255,64,204,1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-around;
+    background: -webkit-linear-gradient(360deg, rgba(97,35,219,1) 0%, rgba(255,64,204,1) 100%);
+    padding: 20px;
+    font-size: 0.8em; /* Smaller font size for bottom section */
+  }
+  
+  .policy-links a {
+    margin-right: 10px; /* Space between links */
     color: white;
     text-decoration: none;
-    margin: 0 10px;
-}
-
-.footer-social-media a {
-    margin: 0 5px;
-}
-
-.footer-social-media img {
-    width: 30px; /* Adjust size to fit */
-}
-
-.footer-copy {
-    border-top: 1px solid #555; /* Color to match design */
-    padding-top: 20px;
-    font-size: 0.75em;
-}
+  }
