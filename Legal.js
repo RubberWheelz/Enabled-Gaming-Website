@@ -2,7 +2,6 @@ function changeContent(article) {
     const leftColumn = document.getElementById('left-column-content');
     const rightColumn = document.getElementById('right-column-content');
   
-    // Clear existing content
     leftColumn.innerHTML = '';
     rightColumn.innerHTML = '';
   

@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
   backToTopBtn.onclick = function() {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth' // Smooth scroll
+      behavior: 'smooth'
     });
   };
 });
