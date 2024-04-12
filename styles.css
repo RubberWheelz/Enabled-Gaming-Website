@@ -170,15 +170,26 @@ body {
   font-family: 'NOMA';
   max-width: 900px;
 }
+#h3-2 {
+  background: -webkit-linear-gradient(90deg, rgba(97,35,219,1) 0%, rgba(255,64,204,1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}  
 .carousel-item p {
   font-size: 18px;
   margin-left: 60px;
   margin-top: 60px;
+} 
+#cp1 {
+color: #ffffff;
+} 
+#cp2 {
   background: -webkit-linear-gradient(90deg, rgba(97,35,219,1) 0%, rgba(255,64,204,1) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-} 
+}  
 .carousel-item img {
   border-radius: 8px 8px 8px 8px;
   width: 1250px;

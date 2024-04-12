@@ -10,7 +10,7 @@
 <body>
   <div class="flex-container">
      <aside class="left-sidebar">
-     <a href="index.html"><img class="logo" src="EG Logo.png" alt="Enabled Gaming Logo"></a>
+     <a href="index.html"><img class="logo" src="eg-logo.png" alt="Enabled Gaming"></a>
        <ul class="sidebar-nav">
          <li><a href="index.html"><img src="homeG.png" alt="Home Page Navigation Icon"></a></li>
          <li><img src="megaphone.png" alt="News Page Navigation Icon"></li>
@@ -24,27 +24,27 @@
          <li><a href="404page.html"><img src="warning.png" alt="404 Error Page Navigation Icon"></a></li>
        </ul>
      </aside>
-  <main class="content"> 
-  <div class="carousel-container">
-  <div class="carousel">
-   <div class="carousel-item">
-    <img src="LastOfUs.jpg" alt="The Last of Us Part 2 Game with Protagonist Firing Weapon">
-     <div class="article-info">
-       <h3>The Last of Us Part II: Best accessibility in a game</h3>
-       <p>Alex Gordon - 23 Dec 2024</p>
-     </div>
-   </div>
-   <div class="carousel-item">
-     <img src="AdaptiveContWS.jpg" alt="Xbox Adaptive Controller with Switches Attached">
-     <div class="article-info">
-     <h3>The best Enabling Tech to get you gaming</h3>
-     <p>Alex Gordon - 23 Dec 2024</p>
-   </div>
- </div>
- </div>
+<main class="content"> 
+    <div class="carousel-container">
+        <div class="carousel">
+              <div class="carousel-item">
+                  <img src="LastOfUs.jpg" alt="The Last of Us Part 2 Game with Protagonist Firing Weapon">
+                      <div class="article-info">
+                            <h3>The Last of Us Part II: Best accessibility in a game</h3>
+                            <p id="cp1">Alex Gordon - 23 Dec 2024</p>
+                      </div>
+              </div>
+              <div class="carousel-item">
+                  <img src="AdaptiveContWS.jpg" alt="Xbox Adaptive Controller with Switches Attached">
+                      <div class="article-info">
+                            <h3 id="h3-2">The best Enabling Tech to get you gaming</h3>
+                            <p id="cp2">Alex Gordon - 23 Dec 2024</p>
+               </div>
+         </div>
+    </div>
  <div class="carousel-navigation">
-   <button onclick="prevSlideCarousel()">◀</button>
-   <button onclick="nextSlideCarousel()">▶</button>
+   <button onclick="prevSlideCarousel()" aria-label="previous slide">◀</button>
+   <button onclick="nextSlideCarousel()" aria-label="next slide">▶</button>
  </div>
  <div class="current-article-indicator">1 / 2</div>
 </div>      
@@ -63,8 +63,8 @@
     <img src="IntoTheBreach.jpg" alt="Into The Breach Game">
   </div>
  </div>
- <button class="slide-arrow left-arrow">&lt;</button>
- <button class="slide-arrow right-arrow">&gt;</button>
+ <button class="slide-arrow left-arrow" aria-label="left arrow">&lt;</button>
+ <button class="slide-arrow right-arrow" aria-label="right arrow">&gt;</button>
 </div>
  <section id="latest-articles" class="articles-section">
  <h2>Latest Articles</h2>
