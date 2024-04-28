@@ -12,17 +12,42 @@ body {
   flex-wrap: nowrap;
   justify-content: space-between;
 }
+.hamburger-menu {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+.hamburger-menu img {
+width: 60px;
+}  
+.top-navbar {
+  display: none;
+  background-color: #1C1C1C;
+  padding: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
 .left-sidebar {
-  width: 100px;
-  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 110px;
   background-color: #1C1C1C;
   padding: 20px;
-  padding-left: 10px;
   box-sizing: border-box;
   position: sticky;
   top: 0;
   height: 100vh;
-  overflow-y: hidden;
+  overflow-y: auto;
+}
+.left-sidebar.collapsed {
+  transform: translateX(-100%);
 }
 .logo {
   display: block;
@@ -58,25 +83,45 @@ body {
   padding: 10px;
 }
 @media (max-width: 768px) {
-.flex-container {
-  flex-direction: column;
+  .top-navbar {
+    display: flex;
+  }
+  .left-sidebar {
+    display: none;
+  }
+  .left-sidebar.collapsed {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+  }
+   .error-image {
+    content: url('4041.png');
+    width: 70%;
+    max-width: 252px;
+    max-height: 715px;
+  }
+  .content {
+    padding: 20px;
+    margin-top: 50px;
+  } 
+  .sleeping-controller {
+    width: 70%;
+    top: 70%;
+  }
 }
 .content {
-  width: 100%;
-  padding: 15px;
-}
-}
-.content {
-  margin-left: 0px; /* Adjust based on sidebar width */
+  margin-left: 0px;
   text-align: center;
   color: white;
   background-color: black;
 }
 .error-message {
-  font-size: 2em; /* Adjust size as necessary */
+  font-size: 2em;
   color: white;
   text-align: center;
-  padding-top: 20px; /* Spacing from the top */
+  padding-top: 20px;
   max-width: 70%;
   margin: 0 auto;
 }
@@ -84,7 +129,7 @@ body {
   position: relative;
   max-width: 1300px;
   margin: 0 auto;
-  padding-top: 10px; /* Adjust as needed */
+  padding-top: 10px;
   height: calc(100vh - 110px);
 }
 .error-container h1 {
@@ -101,17 +146,16 @@ body {
   margin-top: 10px;
 }
 .error-image {
-  width: 100%; /* Adjust the size as necessary */
+  width: 100%;
   position: relative;
   z-index: 1;
 }
 .sleeping-controller {
-  width: 40%; /* Adjust the size as necessary */
+  width: 40%;
   position: absolute;
-  top: 46%; /* Adjust to align it properly over the 404 image */
+  top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
 }
 .return-link {
   position: absolute;
@@ -124,6 +168,7 @@ body {
   padding: 15px 20px;
   text-decoration: none;
   border-radius: 8px;
+  z-index: 1000;
 }
 .return-link:hover {
   opacity: 0.5;
